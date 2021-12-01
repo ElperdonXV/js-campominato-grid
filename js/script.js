@@ -9,61 +9,38 @@
 
 //seleziono il livello di difficoltà
 const play = document.getElementById('play');
+const containerGrid = document.getElementById('container');
 play.addEventListener('click', function () {
-    let select = document.getElementById('difficulty');
-    let value = select.options[select.selectedIndex].value;
-    if (value == 'easy') {
-        const row = 10;
-        const col = 10;
-        const numberSquare = row * col;
-        const maxNumber = numberSquare;
-        const minNumber = 1;
-        const containerGrid = document.getElementById('container');
-        for (let i = 0; i < numberSquare; i++) {
-            const square = document.createElement('div');
-            square.classList.add('square');
-            square.style.width = `calc(100% / ${col})`;
-            square.style.height = `calc(100% / ${row})`;
-            square.append(i + 1);
-            containerGrid.append(square);
-        }
+    container.innerHTML = '';
 
+    const value = document.getElementById('difficulty').value;
+    
+    let col=0;
+    let row=0;
+
+    if (value == 'easy') {
+        row = 10;
+        col = 10; 
     }
     else if (value == 'normal') {
-        const row = 9;
-        const col = 9;
-        const numberSquare = row * col;
-        const maxNumber = numberSquare;
-        const minNumber = 1;
-        const containerGrid = document.getElementById('container');
-        for (let i = 0; i < numberSquare; i++) {
-            const square = document.createElement('div');
-            square.classList.add('square');
-            square.style.width = `calc(100% / ${col})`;
-            square.style.height = `calc(100% / ${row})`;
-            square.append(i + 1);
-            containerGrid.append(square);
-        }
-
+        row = 9;
+        col = 9;
     }
     else if (value == 'hard') {
-        const row = 7;
-        const col = 7;
-        const numberSquare = row * col;
-        const maxNumber = numberSquare;
-        const minNumber = 1;
-        const containerGrid = document.getElementById('container');
-        for (let i = 0; i < numberSquare; i++) {
-            const square = document.createElement('div');
-            square.classList.add('square');
-            square.style.width = `calc(100% / ${col})`;
-            square.style.height = `calc(100% / ${row})`;
-            square.append(i + 1);
-            containerGrid.append(square);
-        }
-
+        row = 7;
+        col = 7;
     }
-});
+
+    let numberSquare = row * col;
+    for (let i = 0; i < numberSquare; i++) {
+        const square = document.createElement('div');
+        square.classList.add('square');
+        square.style.width = `calc(100% / ${col})`;
+        square.style.height = `calc(100% / ${row})`;
+        square.append(i + 1);
+        containerGrid.append(square);
+    }
+})
 
 
 
