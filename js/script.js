@@ -4,3 +4,15 @@
 //con difficoltà 3 => tra 1 e 49
 //Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
+//livello 1 
+const row = 10;
+const col = 10;
+const numberSquare = row * col;
+const maxNumber = numberSquare;
+const minNumber = 1;
+const containerGrid = document.getElementById('container');
+for (let i = 0; i < numberSquare; i++) {
+       const square = document.createElement('div');
+       square.classList.add('square');
+       containerGrid.append(square);
+    }
