@@ -39,6 +39,9 @@ play.addEventListener('click', function () {
         square.style.height = `calc(100% / ${row})`;
         square.append(i + 1);
         containerGrid.append(square);
+        square.addEventListener('click', function () {
+            this.classList.add('clicked');
+        })
     }
 })
 
