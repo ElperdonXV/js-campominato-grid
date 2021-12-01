@@ -41,12 +41,12 @@ body{
 }
 
 .container{
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     margin: 10vh auto;
-    background-color: white;
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid black;
 }
 
 .square {
@@ -55,7 +55,6 @@ body{
   justify-content: center;
   width: calc(100% / var(--square-size)); /*possiamo cambiare numero square con variabile*/
   height: calc(100% / var(--square-size));
-  color: white;
   cursor: pointer;
   border: 2px solid black;
 }
@@ -82,3 +81,17 @@ body{
   display: block;
 }
 */
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+footer h2{
+    margin-left: 10px;
+}

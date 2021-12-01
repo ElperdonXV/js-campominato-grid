@@ -14,5 +14,7 @@ const containerGrid = document.getElementById('container');
 for (let i = 0; i < numberSquare; i++) {
        const square = document.createElement('div');
        square.classList.add('square');
+       square.append(i+1);
        containerGrid.append(square);
     }
+
